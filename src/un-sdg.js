@@ -115,6 +115,8 @@ export class UnSdg extends DDDSuper(LitElement) {
     this.image = new URL("/lib/svgs/1.svg", import.meta.url).href;
     this.width = 254;
     this.colorOnly = false;
+    this.loading = "lazy";
+    this.fetchPriority = "low";
   }
 
   // reflect goal, width, and colorOnly properties to attributes so they can be updated
@@ -125,6 +127,12 @@ export class UnSdg extends DDDSuper(LitElement) {
       image: { type: String },
       width: { type: Number, reflect: true },
       colorOnly: { type: Boolean, attribute: "color-only", reflect: true },
+      loading: { type: String, reflect: true },
+      fetchPriority: {
+        type: String,
+        attribute: "fetch-priority",
+        reflect: true,
+      },
     };
   }
 
@@ -138,10 +146,7 @@ export class UnSdg extends DDDSuper(LitElement) {
   updateGoalImage() {
     // checking if goal is "all" or "circle" then setting the image source
     if (this.goal === "all" || this.goal === "circle") {
-      this._currentSrc = new URL(
-        `/lib/svgs/${this.goal}.svg`,
-        import.meta.url
-      ).href;
+      this.image = new URL(`/lib/svgs/${this.goal}.svg`, import.meta.url).href;
       // setting alt text if the goal is "all" or "circle"
       this.label =
         this.goal === "all"
@@ -194,6 +199,10 @@ export class UnSdg extends DDDSuper(LitElement) {
         src="${this.image}"
         alt="${this.label}"
         style="width: ${this.width}px;"
+        loading="${this.loading === "eager" || this.loading === "lazy"
+          ? this.loading
+          : "lazy"}"
+        fetchPriority="${this.fetchPriority}"
       />`;
     }
 
@@ -217,6 +226,10 @@ export class UnSdg extends DDDSuper(LitElement) {
       src="${this.image}"
       alt="${this.label}"
       style="width: ${this.width}px;"
+      loading="${this.loading === "eager" || this.loading === "lazy"
+        ? this.loading
+        : "lazy"}"
+      fetchPriority="${this.fetchPriority}"
     />`;
   }
   /**
