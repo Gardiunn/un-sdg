@@ -112,7 +112,7 @@ export class UnSdg extends DDDSuper(LitElement) {
     super();
     this.goal = 1;
     this.label = "No Poverty";
-    this.image = new URL("./lib/svgs/1.svg", import.meta.url).href;
+    this.image = new URL("/lib/svgs/1.svg", import.meta.url).href;
     this.width = 254;
     this.colorOnly = false;
   }
@@ -139,7 +139,7 @@ export class UnSdg extends DDDSuper(LitElement) {
     // checking if goal is "all" or "circle" then setting the image source
     if (this.goal === "all" || this.goal === "circle") {
       this._currentSrc = new URL(
-        `../lib/svgs/${this.goal}.svg`,
+        `/lib/svgs/${this.goal}.svg`,
         import.meta.url
       ).href;
       // setting alt text if the goal is "all" or "circle"
@@ -152,7 +152,7 @@ export class UnSdg extends DDDSuper(LitElement) {
       const goal = parseInt(this.goal);
       if (goal >= 1 && goal <= 17) {
         // filenames are "1.svg", "2.svg"... to make it easy to set the image source based on the goal number
-        this.image = new URL(`../lib/svgs/${goal}.svg`, import.meta.url).href;
+        this.image = new URL(`/lib/svgs/${goal}.svg`, import.meta.url).href;
         // setting alt text based on the goal number
         this.label = `Goal ${goal}: ${goals[goal - 1].label}`;
       }
@@ -189,10 +189,7 @@ export class UnSdg extends DDDSuper(LitElement) {
   render() {
     // rendering image if goal is "all" or "circle" with src and alt properties, setting width based on the width property, default 254px
     if (this.goal === "all" || this.goal === "circle") {
-      this.image = new URL(
-        `../lib/svgs/${this.goal}.svg`,
-        import.meta.url
-      ).href;
+      this.image = new URL(`/lib/svgs/${this.goal}.svg`, import.meta.url).href;
       return html` <img
         src="${this.image}"
         alt="${this.label}"
