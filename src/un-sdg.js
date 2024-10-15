@@ -197,10 +197,12 @@ export class UnSdg extends DDDSuper(LitElement) {
   render() {
     // rendering image if goal is "all" or "circle" with src and alt properties, setting width based on the width property, default 254px
     if (this.goal === "all" || this.goal === "circle") {
+      // setting image property with the source, "all" or "circle"
       this.image = new URL(
         `../lib/svgs/${this.goal}.svg`,
         import.meta.url
       ).href;
+      // rendering image
       return html` <img
         src="${this.image}"
         alt="${this.label}"
