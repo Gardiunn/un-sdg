@@ -6,86 +6,103 @@ const goals = [
   {
     label: "No Poverty",
     color: "#d83534",
+    image: new URL("../lib/svgs/1.svg", import.meta.url).href,
   },
 
   {
     label: "Zero Hunger",
     color: "#cba342",
+    image: new URL("../lib/svgs/2.svg", import.meta.url).href,
   },
 
   {
     label: "Good Health and Well-being",
     color: "#cba342",
+    image: new URL("../lib/svgs/3.svg", import.meta.url).href,
   },
 
   {
     label: "Quality Education",
     color: "#b32e36",
+    image: new URL("../lib/svgs/4.svg", import.meta.url).href,
   },
 
   {
     label: "Gender Equality",
     color: "#dd4d35",
+    image: new URL("../lib/svgs/5.svg", import.meta.url).href,
   },
 
   {
     label: "Clean Water And Sanitation",
     color: "#4eacd5",
+    image: new URL("../lib/svgs/6.svg", import.meta.url).href,
   },
 
   {
     label: "Affordable And Clean Energy",
     color: "#f3bb42",
+    image: new URL("../lib/svgs/7.svg", import.meta.url).href,
   },
 
   {
     label: "Decent Work And Economic Growth",
     color: "#842036",
+    image: new URL("../lib/svgs/8.svg", import.meta.url).href,
   },
 
   {
     label: "Industry, Innovation And Infrastructure",
     color: "#e37537",
+    image: new URL("../lib/svgs/9.svg", import.meta.url).href,
   },
 
   {
     label: "Reduced Inequalities",
     color: "#ce2f82",
+    image: new URL("../lib/svgs/10.svg", import.meta.url).href,
   },
 
   {
     label: "Sustainable Cities And Communities",
     color: "#eca342",
+    image: new URL("../lib/svgs/11.svg", import.meta.url).href,
   },
 
   {
     label: "Responsible Consumption And Production",
     color: "#c7913e",
+    image: new URL("../lib/svgs/12.svg", import.meta.url).href,
   },
 
   {
     label: "Climate Action",
     color: "#527742",
+    image: new URL("../lib/svgs/13.svg", import.meta.url).href,
   },
 
   {
     label: "Life Below Water",
     color: "#367cb7",
+    image: new URL("../lib/svgs/14.svg", import.meta.url).href,
   },
 
   {
     label: "Life On Land",
     color: "#5fae55",
+    image: new URL("../lib/svgs/15.svg", import.meta.url).href,
   },
 
   {
     label: "Peace, Justice And Strong Institutions",
     color: "#225387",
+    image: new URL("../lib/svgs/16.svg", import.meta.url).href,
   },
 
   {
     label: "Partnerships For The Goals",
     color: "#1b3264",
+    image: new URL("../lib/svgs/17.svg", import.meta.url).href,
   },
 ];
 
