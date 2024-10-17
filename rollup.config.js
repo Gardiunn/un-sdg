@@ -22,7 +22,7 @@ export default {
       minify: true,
     }),
     copy({
-      targets: [{ src: "lib/", dest: "dist" }],
+      targets: [{ src: "lib/", dest: "public" }],
     }),
     /** Resolve bare module imports */
     nodeResolve(),
